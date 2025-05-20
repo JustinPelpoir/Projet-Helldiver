@@ -1,0 +1,34 @@
+header {
+    text-align: center;
+}
+
+header img  {
+    border-radius: 8px;
+}
+
+
+
+
+nav {
+    display: block;
+    padding: 10px;
+    margin: 5px;
+}
+
+nav a {
+    text-decoration: none;
+    color: black;
+    border-radius: 40px;
+    font-size: larger;
+    padding: 10px 40px;
+    margin: 0px 50px;
+  
+
+
+    background-color:rgb(255, 220, 46)
+
+}
+
+nav a:hover {
+    background-color: rgb(108, 108, 233);
+}
