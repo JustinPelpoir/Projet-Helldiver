@@ -1,14 +1,59 @@
 header {
+      background-color: #0b1a3d;
+      color: white;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 10px 0%;
+      position: fixed;
+      width: 100%;
+      top: 0;
+      z-index: 1000;
+      border-radius: 10px;
+    }
+
+    .left-header {
+      display: flex;
+      align-items: center;
+    }
+
+    .left-header img {
+      height: 40px;
+      margin-right: 10px;
+    }
+
+    .right-header {
+      display: flex;
+      gap: 10px;
+    }
+
+    .right-header a {
+      color: white;
+      text-decoration: none;
+      padding: 5px 10px;
+    }
+
+    .right-header button {
+      background-color: #555;
+      color: white;
+      border: none;
+      padding: 5px 10px;
+      cursor: pointer;
+    }
+
+
+
+
+
+.main-banner {
     text-align: center;
     position: relative;
 }
 
-header img  {
+.main-banner img  {
     border-radius: 8px;
     width: 100%;
 }
-
-
 
 
 nav {
