@@ -32,11 +32,105 @@
             <a href="formulaire.html">Formulaire</a>
         </div>    
 
+        <form method="post" name="Quiz" action="#" class="box" id="QuizId" onsubmit="return false">
+        <fieldset id="informations">
+            <legend>Vos informations</legend>
+                <div>
+                    <label for="nom">Nom :</label>
+                    <input type="text" id="nom" name="nom" required>
+                </div>
+                <div>
+                    <label for="prenom">Prénom :</label>
+                    <input type="text" id="prenom" name="prenom" required>
+                </div>
+                <div>
+                    <label for="date_naissance">Date de naissance :</label>
+                    <input type="date" id="date_naissance" name="date_naissance" required>
+                </div>
+                <div>
+                    <label for="mail">Adresse mail :</label>
+                    <input type="email" id="mail" name="mail" required>
+                </div>
+                <div>
+                    <label for="statut">Statut :</label>
+                    <select id="statut" name="statut" required>
+                        <option value="" disabled selected>Choisissez un statut</option>
+                        <option value="citoyen">Citoyen modèle</option>
+                        <option value="seaf">S.E.A.F</option>
+                        <option value="liberthé">Buveur de liber-thé</option>
+                    </select>
+                </div>
+                <div>
+                    <label for="carte">Code de carte bleue :</label>
+                    <input type="text" id="cb" name="cb" pattern="\\d{16}" maxlength="16" placeholder="1234123412341234" required/>
+                </div>
+            <div><button type="submit" onclick="quizAlert()">Commencer le quiz démocratique !</button></div>
+            
+        </fieldset>
+        <fieldset class="quiz">
+            <legend>Quiz Démocratique</legend>
+            <ol>
+                <li class="questions_style">Qu'est-ce qu'un Helldiver ?
+                    <ul class ="questions">
+                        <li>
+                            <input type="radio" id="q1_1" name="q1" value="a">
+                            <label for="q1_1" class="btn_radio"> Un très bon cuisinier</label>
+                        </li>
+                        <li>
+                            <input type="radio" id="q1_2" name="q1" value="b">
+                            <label for="q1_2" class="btn_radio"> Un soldat au service de la démocratie encadrée</label>
+                        </li>
+                        <li>
+                            <input type="radio" id="q1_3" name="q1" value="c">
+                            <label for="q1_3" class="btn_radio"> Un monstre qui attaque les enfants</label>
+                        </li>
+                    </ul>
+                </li>
+                <li class="questions_style">Quel est l'empreinte carbone d'une mission démocratique ?
+                    <ul class ="questions">
+                        <li>
+                            <input type="checkbox" id="q2_1" name="q2[]" value="a">
+                            <label for="q2_1" class="btn_check"> 5 tonnes d'équivalent CO2, soit la moitié d'un français moyen par an !</label>
+                        </li>
+                        <li>
+                            <input type="checkbox" id="q2_2" name="q2[]" value="b">
+                            <label for="q2_2" class="btn_check"> 100 tonnes d'équivalent CO2, soit 62 allers-retours Paris-New York en avion</label>
+                        </li>
+                        <li>
+                            <input type="checkbox" id="q2_3" name="q2[]" value="c">
+                            <label for="q2_3" class="btn_check"> 400 tonnes d'équivalent CO2, rien n'est de trop quand il s'agit de répandre la démocratie encadrée</label>
+                        </li>
+                    </ul>
+                </li class="questions_style">
+                <li> Que penses-tu de la Super-Terre ?<br>
+                    <textarea id="q3" name="q3" required> </textarea>
+                </li>
+            </ol>
+            <button type="submit" onclick="submitQuiz()">Envoyer les réponses</button>
+        </fieldset>
 
-
-
-
+    </form>
+    <fieldset>
+        <main class="box">
+        <table id="result">
+            <caption>
+                Résultats du Quiz
+            </caption>
+            <thead>
+                <tr>
+                    <th>Essai</th>
+                    <th>Score</th>
+                </tr>
+                <tbody></tbody>
+                
+            </thead>
         
+        </table>
+
+    </main>
+    </fieldset>
+
+
         <footer>
                     <img src="../img/helldivers2_logo.png" alt="Logo" />
                     <h2><a href="à propos.html">A propos</a></h2>
