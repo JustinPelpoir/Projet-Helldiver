@@ -1,34 +1,193 @@
-<!DOCTYPE html> <!-- Version 5 de HTML-->
-<html lang="fr"> <!-- Précision de la langue pour le navigateur-->
-    <head> <!-- Entête du document HTML -->
-        <title>Join the Helldivers</title> <!-- Indique au navigateur quel titre vous donnez à votre page -->
-        <meta charset="UTF-8"> <!-- précise l'encodage des caractère à UTF-8-->
-        <meta name="viewport" content="width=device-width, initial-scale=1" />
-        <link rel="stylesheet" type="text/css" href="../css/styles.css">
-    </head><!-- Fin de la balise d'entête -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Helldivers</title>
+  <link rel="stylesheet" href="style.css" />
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
 
+    body {
+      font-family: Arial, sans-serif;
+    }
 
-    <body><!-- Début du code de la page web -->
-        <header>
-            
-            
-        </header>
-        <section>
-            
-        </section>
-       
+    header {
+      background-color: #0b1a3d;
+      color: white;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 10px 20px;
+      position: fixed;
+      width: 100%;
+      top: 0;
+      z-index: 1000;
+    }
 
+    .left-header {
+      display: flex;
+      align-items: center;
+    }
 
-       
-        <footer>
-            
-        </footer>
-    </body><!-- Fin du code de la page web -->
+    .left-header img {
+      height: 40px;
+      margin-right: 10px;
+    }
 
-</html><!-- Fin du document -->
+    .right-header {
+      display: flex;
+      gap: 10px;
+    }
 
+    .right-header a {
+      color: white;
+      text-decoration: none;
+      padding: 5px 10px;
+    }
 
+    .right-header button {
+      background-color: #555;
+      color: white;
+      border: none;
+      padding: 5px 10px;
+      cursor: pointer;
+    }
 
-<script>
-   
-</script>
+    .main-banner {
+      margin-top: 50px;
+    }
+
+    .main-banner img {
+      width: 100%;
+      height: 400px;
+      object-fit: cover;
+    }
+
+    .nav-buttons {
+      display: flex;
+      justify-content: center;
+      gap: 20px;
+      margin: 20px 0;
+    }
+
+    .nav-buttons a {
+      background-color: #f1c40f;
+      border: none;
+      padding: 10px 20px;
+      border-radius: 20px;
+      text-decoration: none;
+      color: black;
+      font-weight: bold;
+    }
+
+    .title-section {
+      text-align: center;
+      font-size: 2em;
+      font-weight: bold;
+      margin: 40px 0 20px;
+    }
+
+    .info-section {
+      display: flex;
+      justify-content: center;
+      align-items: flex-start;
+      gap: 20px;
+      padding: 0 20px 40px;
+      flex-wrap: wrap;
+    }
+
+    .info-box {
+      width: 300px;
+      border: 2px solid black;
+      border-radius: 20px;
+      padding: 20px;
+      text-align: center;
+      background-color: white;
+    }
+
+    .info-box h2 {
+      margin-bottom: 10px;
+    }
+
+    .video-box iframe {
+      width: 300px;
+      height: 200px;
+      border-radius: 10px;
+    }
+
+    footer {
+      background-color: #0b1a3d;
+      color: white;
+      text-align: center;
+      padding: 20px;
+    }
+
+    footer img {
+      height: 40px;
+      margin-bottom: 10px;
+    }
+
+    footer p {
+      font-size: 0.9em;
+      margin: 5px 0;
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <div class="left-header">
+      <img alt="Logo" src="../img/helldivers2_logo.png" />
+      <span>To spread managed democracy</span>
+    </div>
+    <div class="right-header">
+      <a href="presentation.html">Sign in</a>
+      <button onclick="window.location.href='formulaire.html'">Subscribe</button>
+    </div>
+  </header>
+
+  <div class="main-banner">
+    <img alt="image alt text" src="../img/helldivers2_accueil.jpg" height="100px" width="100%">
+  </div>
+
+  <div class="nav-buttons">
+    <a href="accueil.html">Accueil</a>
+    <a href="factions.html">Factions</a>
+    <a href="ennemis.html">Ennemis</a>
+    <a href="formulaire.html">Formulaire</a>
+  </div>
+
+  <div class="title-section">
+    REJOINS LES HELLDIVERS !
+  </div>
+
+  <div class="info-section">
+    <div class="info-box">
+      <h2>Qui sommes-nous ?</h2>
+      <p>Nous sommes les Helldivers
+        une unité d'élite prête à tout pour défendre la Super-Terre. 
+        Unis par l'honneur, le courage et la volonté inébranlable de répandre la démocratie encadrée, 
+        nous combattons sur les planètes les plus hostiles de la galaxie.</p>
+    </div>
+    <div class="info-box">
+      <h2>Que faisons-nous ?</h2>
+      <p>Notre mission est simple : 
+        débarquer en territoire alien, éliminer toutes les menaces, et assurer la survie de la liberté à travers les étoiles. 
+        Insectes géants, robots rebelles, ou créatures inconnues, aucun ennemi n'échappera à la puissance de notre démocratie !</p>
+    </div>
+    <div class="video-box">
+      <iframe src="urlvideo" frameborder="0" allowfullscreen></iframe>
+    </div>
+  </div>
+
+  <footer>
+    <img src="../img/helldivers2_logo.png" alt="Logo" />
+    <p>About</p>
+    <p>Conditions d'utilisations</p>
+  </footer>
+</body>
+</html>
