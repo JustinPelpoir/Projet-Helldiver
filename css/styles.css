@@ -1,15 +1,24 @@
-header {
+* {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      font-family: Arial, sans-serif;
+    }
+
+    header {
       background-color: #0b1a3d;
       color: white;
       display: flex;
       justify-content: space-between;
       align-items: center;
-      padding: 10px 0%;
+      padding: 10px 20px;
       position: fixed;
       width: 100%;
       top: 0;
       z-index: 1000;
-      border-radius: 10px;
     }
 
     .left-header {
@@ -41,47 +50,94 @@ header {
       cursor: pointer;
     }
 
+    .main-banner {
+      margin-top: 50px;
+    }
 
+    .main-banner img {
+      width: 100%;
+      height: 400px;
+      object-fit: cover;
+    }
 
+    .nav-buttons {
+      display: flex;
+      justify-content: center;
+      gap: 20px;
+      margin: 20px 0;
+    }
 
+    .nav-buttons a {
+      background-color: #f1c40f;
+      border: none;
+      padding: 10px 20px;
+      border-radius: 20px;
+      text-decoration: none;
+      color: black;
+      font-weight: bold;
+    }
 
-.main-banner {
-    text-align: center;
-    position: relative;
-}
+    .title-section {
+      text-align: center;
+      font-size: 2em;
+      font-weight: bold;
+      margin: 40px 0 20px;
+    }
 
-.main-banner img  {
-    border-radius: 8px;
-    width: 100%;
-}
+    .info-section {
+      display: flex;
+      justify-content: center;
+      align-items: flex-start;
+      gap: 20px;
+      padding: 0 20px 40px;
+      flex-wrap: wrap;
+    }
 
+    .info-box {
+      width: 450px;
+      min-height: 250px;
+      border: 2px solid #0b1a3d;
+      border-radius: 20px;
+      padding: 30px;
+      text-align: left;
+      background-color: white;
+      display: flex;
+      flex-direction: column;
+      justify-content: flex-start;
+    }
 
-nav {
-    position:absolute;
-    bottom: 20px;
-    left: 50%;
-    transform: translateX(-50%);
-    display: block;
-    justify-content: center;
-    width: 100%;
-    padding: 10px;
-    margin: 5px;
-}
+    .info-box h2 {
+      margin-bottom: 10px;
+    }
 
-nav a {
-    text-decoration: none;
-    color: black;
-    border-radius: 40px;
-    font-size: larger;
-    padding: 10px 40px;
-    margin: 0px 50px;
-  
+    .video-box iframe {
+      width: 450px;
+      height: 250px;
+      border-radius: 10px;
+    }
 
+    footer {
+      background-color: #0b1a3d;
+      color: white;
+      text-align: center;
+      padding: 20px;
+    }
 
-    background-color:rgb(255, 220, 46)
+    footer img {
+      height: 40px;
+      margin-bottom: 10px;
+    }
 
-}
+    footer p {
+      font-size: 0.9em;
+      margin: 5px 0;
+    }
 
-nav a:hover {
-    background-color: rgb(108, 108, 233);
-}
+    footer a {
+      color: #f1c40f; 
+      text-decoration: none;
+    }
+
+    footer a:hover {
+      color: white;
+    }
