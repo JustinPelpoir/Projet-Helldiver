@@ -6,6 +6,9 @@ function quizAlert() {
   // Cacher le formulaire d’inscription
   document.getElementById('informations').style.display = 'none';
 
+
+  // Afficher le quiz
+  document.getElementById('quiz').style.display = 'block';
 }
 
 
