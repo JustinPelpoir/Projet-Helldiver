@@ -263,6 +263,13 @@ tfoot tr {
     display: none;
 }
 
+
+.countdown {
+  display: none;
+  font-size: 1.5em;
+  margin: 1em 0;
+}
+
 #result th,
 #result td {
     text-align: center;

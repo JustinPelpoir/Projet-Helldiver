@@ -28,7 +28,7 @@
     <a href="hellbot.html">Hellbot</a>
     <a href="formulaire.html">Formulaire</a>
   </div>
-    <form method="post" name="Quiz" action="#" class="box" id="QuizId" onsubmit="return false">
+    <form method="post" name="Quiz" class="box" id="QuizId">
         <fieldset id="informations">
             <legend>Vos informations</legend>
                 <div>
@@ -60,10 +60,14 @@
                     <label for="carte">Code de carte bleue :</label>
                     <input type="text" id="cb" name="cb" pattern="\d{16}" maxlength="16" placeholder="1234123412341234" required/>
                 </div>
-            <div><button type="submit" onclick="quizAlert()">Commencer le quiz démocratique !</button></div>
-            
+            <div><button type="button" onclick="quizAlert()">Commencer le quiz démocratique !</button></div>
+            S
         </fieldset>
-        <fieldset class="quiz">
+
+        <!-- Compte à rebours -->
+        <!-- <div class="countdown "id="countdown"></div> -->
+
+        <fieldset class="quiz" id="quiz">
             <legend>Quiz Démocratique</legend>
             <ol>
                 <li class="questions_style">Qu'est-ce qu'un Helldiver ?
@@ -156,6 +160,9 @@
     <img src="../img/helldivers2_logo.png" alt="Logo" />
     <h2><a href="à propos.html">A propos</a></h2>
   </footer>
+
+
+  <script src="../js/form.js"></script>
         
 </body>
 </html>
