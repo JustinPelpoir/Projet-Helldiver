@@ -1,32 +1,52 @@
-<!DOCTYPE html>
-<html lang="fr">
-<head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Helldivers</title>
-  <link rel="stylesheet" href="../css/styles.css" />
-
-</head>
-
-
-<body>
-  <header>
-    <div class="left-header">
-      <img alt="Logo" src="../img/helldivers2_logo.png" />
-      <span>Pour propager la démocratie contrôlée</span>
-    </div>
-    <div class="right-header">
-      <a href="presentation.html">Se connecter</a>
-      <button onclick="window.location.href='formulaire.html'">S'abonner</button>
-    </div>
-  </header>
+<!DOCTYPE html> <!-- Version 5 de HTML-->
+<html lang="fr"> <!-- Précision de la langue pour le navigateur-->
+    <head> <!-- Entête du document HTML -->
+        <title>A helldiver</title> <!-- Indique au navigateur quel titre vous donnez à votre page -->
+        <meta charset="UTF-8"> <!-- précise l'encodage des caractère à UTF-8-->
+        <meta name="viewport" content="width=device-width, initial-scale=1" />
+        <link rel="stylesheet" type="text/css" href="../css/styles.css">
+    </head><!-- Fin de la balise d'entête -->
 
 
-  
+    <body><!-- Début du code de la page web -->
+        <header>
+            <div class="left-header">
+            <img alt="Logo" src="../img/helldivers2_logo.png" />
+            <span>Pour propager la démocratie contrôlée</span>
+            </div>
+            <div class="right-header">
+            <a href="presentation.html">Se connecter</a>
+            <button onclick="window.location.href='formulaire.html'">S'abonner</button>
+            </div>
+        </header>
 
-  <footer>
-    <img src="../img/helldivers2_logo.png" alt="Logo" />
-    <h2><a href="à propos.html">A propos</a></h2>
-  </footer>
-</body>
-</html>
+        <div class="main-banner">
+            <img alt="image alt text" src="../img/helldivers2-hero-blog-db.jpg" height="100px" width="100%">
+        </div>
+
+        <div class="nav-buttons">
+            <a href="accueil.html">Accueil</a>
+            <a href="hellbot.html">Hellbot</a>
+            <a href="formulaire.html">Formulaire</a>
+        </div>
+        <section class="chat-section">
+            <h1 class="chat-title">Hellbot</h1>
+            
+            <div class="chat-container">
+            <div id="chat-box"></div>
+            
+            <div class="input-area">
+                <input type="text" id="user-input" placeholder="Posez votre question...">
+                <button id="send-button" onclick="fetchJSON('../json/hellbot.json')">Envoyer</button>
+            </div>
+            </div>
+        </section>    
+       
+    <footer>
+        <img src="../img/helldivers2_logo.png" alt="Logo" />
+        <h2><a href="à propos.html">A propos</a></h2>
+    </footer>
+    <script src="../js/hellbot.js"></script>
+    </body><!-- Fin du code de la page web -->
+    
+</html><!-- Fin du document -->
