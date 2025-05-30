@@ -273,4 +273,10 @@ tfoot tr {
 #result th,
 #result td {
     text-align: center;
+    margin: 20px auto;
+}
+
+fieldset > main.box {
+  display: flex;
+  justify-content: center;
 }
