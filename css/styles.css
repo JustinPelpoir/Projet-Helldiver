@@ -270,6 +270,11 @@ tfoot tr {
   margin: 1em 0;
 }
 
+
+#result {
+  display:none;
+}
+
 #result th,
 #result td {
     text-align: center;
