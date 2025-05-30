@@ -1,15 +1,24 @@
-function quizAlert() {
+function quizAlert(event) {
 
-  // Message d’alerte
-  alert("Merci pour votre inscription. Le quiz démocratique va commencer...");
+  event.preventDefault();
 
-  // Cacher le formulaire d’inscription
-  document.getElementById('informations').style.display = 'none';
+  const form = document.getElementById('QuizId');
+    const infos = form.querySelectorAll('#informations input, #informations select');
+    let valid = true;
 
+    infos.forEach(field => {
+      if (!field.checkValidity()) {
+        valid = false;
+        field.reportValidity(); // Affiche l'erreur pour l'utilisateur
+      }
+    });
 
-  // Afficher le quiz
-  document.getElementById('quiz').style.display = 'block';
-}
+    if (valid) {
+      alert("Merci pour votre inscription. Le quiz démocratique va commencer...");
+      document.getElementById('informations').style.display = 'none';
+      document.getElementById('quiz').style.display = 'block';
+    }
+  }
 
 
 const correctAnswers = {
