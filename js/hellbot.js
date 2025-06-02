@@ -18,8 +18,6 @@ const historyMessages = new ChatHistory();
 function fetchJSON(url) { 
     // Récupérer le JSON à partir de l'URL fournie 
     fetch(url = '../json/hellbot.json') 
-    //then est une méthode qui retourne une promesse et prend en paramètre une      
-    //fonction callback qui sera exécutée une fois la promesse résolue 
     .then(response => { 
         // Vérifier si la réponse est correcte 
         if (!response.ok) {
@@ -29,22 +27,17 @@ function fetchJSON(url) {
         // Si la réponse est correcte, retourner le JSON 
         return response.json(); 
     }) 
-    //then ici permettra de récupérer le JSON retourné par la promesse 
     .then(data => { 
         // Vérifier si le JSON est vide ou mal formé 
         if (Object.keys(data).length === 0 && data.constructor === Object) { 
             // Si le JSON est vide ou mal formé, lancer une erreur 
             throw new Error('Empty JSON or malformed JSON'); 
         } 
-        //On affiche le JSON dans la console. Il s'agit d'un objet contenant les  
-        // intentions du chatbot 
         console.log(data); 
          
       // Passer les intentions à la fonction sendMessage qui sera définie plus tard 
         sendMessage(data.intents); 
     }) 
-    //catch est une méthode qui retourne une promesse et prend en paramètre une  
-    //fonction callback qui sera exécutée en cas d’erreur 
     .catch(error => { 
         // En cas d’erreur, afficher un message d’erreur dans la console 
         console.error('There was a problem with the fetch operation:', error); 
@@ -72,29 +65,21 @@ function sendMessage(intents) {
 
     if (userMessage === "") return; // Ne rien faire si vide
 
-    // a. Récupération de la saisie utilisateur → déjà fait
-    // b. Affichage du message de l'utilisateur
     showMessage(userMessage, 'user');
 
-    // c. Traitement et réponse du bot
     const botReply = processMessage(intents, userMessage);
 
-    // d. Affichage de la réponse du chatbot
     showMessage(botReply, 'bot');
 
-    // e. Vider le champ de saisie
     input.value = '';
 }
 
 // Fonction pour traiter le message de l'utilisateur 
 function processMessage(intents, message) { 
-    // Par défaut, la réponse est "Je suis désolé, je ne suis pas sûr de comprendre."
     let response = "Je suis désolé, je ne suis pas sûr de comprendre."; 
-    // Parcourir les intentions du chatbot 
-    intents.forEach(intent => { 
-        // Vérifier si le message de l'utilisateur correspond à l'un des motifs 
+
+    intents.forEach(intent => {  
         intent.patterns.forEach(pattern => { 
-        // Vérifier si le message de l'utilisateur contient le motif 
         if (message.toLowerCase().includes(pattern.toLowerCase())) {
             // Sélectionner une réponse aléatoire parmi les réponses possibles 
             response = intent.responses[Math.floor(Math.random() * 
@@ -102,7 +87,6 @@ function processMessage(intents, message) {
         } 
         }); 
     }); 
-    // Retourner la réponse 
     return response; 
 } 
 
