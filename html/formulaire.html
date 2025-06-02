@@ -18,7 +18,7 @@
   </header>
 
   <div class="main-banner">
-    <img alt="image alt text" src="../img/helldivers2-hero-blog-db.jpg" height="100px" width="100%">
+    <img alt="image alt text" src="../img/helldivers2-hero-blog-db.jpg" height="100" width="100">
   </div>
 
   <div class="nav-buttons">
@@ -56,14 +56,11 @@
                 </div>
                 <div>
                     <label for="carte">Code de carte bleue :</label>
-                    <input type="text" id="cb" name="cb" pattern="\d{16}" maxlength="16" placeholder="1234123412341234" required/>
+                    <input type="text" id="carte" name="cb" pattern="\d{16}" maxlength="16" placeholder="1234123412341234" required/>
                 </div>
             <div><button type="button" onclick="quizAlert(event)">Commencer le quiz démocratique !</button></div>
             
         </fieldset>
-
-        <!-- Compte à rebours -->
-        <!-- <div class="countdown "id="countdown"></div> -->
 
         <fieldset class="quiz" id="quiz">
             <legend>Quiz Démocratique</legend>
@@ -116,7 +113,7 @@
                             <label for="q3_3" class="btn_check"> Je fuis en criant "Pour la Super-Terre !"</label>
                         </li>
                     </ul>
-                </li class="questions_style">
+                </li>
 
                 <li> Que penses-tu de la Super-Terre ?<br>
                     <textarea id="q4" name="q4" required> </textarea>
@@ -124,8 +121,11 @@
 
                 <li class="questions_style">À quel point êtes-vous prêt à vous sacrifier pour la démocratie encadrée ?
                     <ul class="questions">
-                        <input type="range" id="q5" name="q5" min="0" max="10" oninput="valSacrifice.value = sacrifice.value">
-                        <output id="valSacrifice">0</output>/10
+                        <li>
+                            <input type="range" id="q5" name="q5" min="0" max="10" oninput="valSacrifice.value = sacrifice.value">
+                            <output id="valSacrifice">0</output>/10
+                        </li>
+                        
                     </ul>
                 </li>
 
@@ -134,8 +134,9 @@
         </fieldset>
 
     </form>
-    <fieldset>
-        <main class="box">
+    <main class="box">
+        <fieldset>
+        
         <table id="result">
             <caption>
                 Résultats du Quiz
@@ -144,19 +145,20 @@
                 <tr>
                     <th>Essai</th>
                     <th>Score</th>
-                </tr>
-                <tbody></tbody>
-                
+                </tr>                
             </thead>
-        
+            <tbody>
+            </tbody>
+
         </table>
 
+        </fieldset>
     </main>
-    </fieldset>
+    
 
   <footer>
     <img src="../img/helldivers2_logo.png" alt="Logo" />
-    <h2><a href="à propos.html">A propos</a></h2>
+    <h2><a href="à_propos.html">A propos</a></h2>
   </footer>
 
 

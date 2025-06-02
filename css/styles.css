@@ -119,6 +119,7 @@
       width: 450px;
       height: 250px;
       border-radius: 10px;
+      border: none;
     }
 
     footer {
@@ -273,18 +274,14 @@ tfoot tr {
 
 #result {
   display:none;
+  margin: 0 auto;
 }
 
 #result th,
 #result td {
     text-align: center;
-    margin: 20px auto;
 }
 
-fieldset > main.box {
-  display: flex;
-  justify-content: center;
-}
 
 /************************* hellbot *************************/
 
